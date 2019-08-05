@@ -2,6 +2,7 @@ class DisplayMap {
   constructor(latCenter, lonCenter, zoom, domElementId){
     this.handleMapClick = this.handleMapClick.bind( this );
     this.addMapListener = this.addMapListener.bind(this);
+    this.renderMarker = this.renderMarker.bind(this);
     this.clickLatitude = 33.66;
     this.clickLongitude = -117.80;
     this.latCenter = latCenter;
@@ -31,7 +32,7 @@ class DisplayMap {
     $('#impact')[0].play();
     this.clickLatitude = event.latLng.lat();
     this.clickLongitude = event.latLng.lng();
-    
+
     var clickLatLon = {lat: this.clickLatitude, lng: this.clickLongitude}
     var impact = 'images/impact_icon2.png'
     var marker = new google.maps.Marker({
@@ -50,8 +51,22 @@ class DisplayMap {
 
   renderMapCircle(){
     // console.log('renderMapCircle');
-  }
 
+  }
+renderMarker(location){
+  var clickLatLon = location;
+  var impact = 'images/impact_icon2.png'
+  var marker = new google.maps.Marker({
+  position: location,
+  map: this.map,
+  animation: google.maps.Animation.DROP,
+  title: 'Yelp'
+});
+console.log(location)
+  marker.setMap(this.map);
+  this.map.setCenter(clickLatLon);
+  this.map.setZoom(15);
+}
   renderMapIcon(icon, location){
 
     //var type = 'yelp'

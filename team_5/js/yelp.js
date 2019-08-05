@@ -2,13 +2,13 @@
 class Yelp{
   constructor(){
     this.yelpAjaxConfig ={};
-    // this.yelpListResults;
     this.getYelpData = this.getYelpData.bind(this);
     this.yelpSuccess = this.yelpSuccess.bind(this);
     this.yelpError = this.yelpError.bind(this);
     this.render = this.render.bind(this);
     this.yelpSearch = this.yelpSearch.bind(this);
     this.applyClickHandler = this.applyClickHandler.bind(this);
+    this.setPosition = this.setPosition.bind(this);
     this.yelpContainer = $(".yelpContainer");
     this.yelpInput = $(".yelpBox");
     this.yelpInputBox = $(".yelpInput");
@@ -18,6 +18,8 @@ class Yelp{
     this.yelpRating;
     this.yelpReview;
     this.yelpPrice;
+    this.latitude = 34.052;
+    this.longitude = -118.243;
 
   }
   applyClickHandler(){
@@ -25,11 +27,13 @@ class Yelp{
   }
   yelpSearch(){
     if (this.yelpInputBox.val() === ""){
-      // console.log("nothing to update")
     } else {
       this.searchValue = this.yelpInputBox.val();
-      // console.log("clickhappened");
+
       this.getYelpData();
+
+      this.render();
+
     }
   }
   getYelpData(){
@@ -42,8 +46,8 @@ class Yelp{
       },
       data: {
         'term': this.searchValue,
-        'latitude': latitude,
-        'longitude': longitude
+        'latitude': this.latitude,
+        'longitude': this.longitude
       },
       success: this.yelpSuccess,
       error: this.yelpError
@@ -51,18 +55,14 @@ class Yelp{
     $.ajax( this.yelpAjaxConfig );
   }
   yelpSuccess(response, status){
-    // console.log("Success response", response);
-    // console.log("Success status", status);
-    // console.log("Diving Deeper ", response.businesses[0]);
-    // console.log("and deeper", response.businesses[0].name);
+    console.log("Success response", response);
     this.yelpListResults = response.businesses;
-    // console.log(this.yelpListResults);
-    this.render();
+
     this.applyClickHandler();
+
   }
   yelpError(response, status) {
-    // console.log("Error response", response);
-    // console.log("Error status", status);
+    console.log("Error response", response);
   }
   render(){
     this.yelpContainer.empty();
@@ -125,7 +125,28 @@ class Yelp{
       resultContainer.append(resultPhotoDiv, resultName, resultAddress, resultRatingReviewPrice, resultCategory);
 
       this.yelpContainer.append(resultContainer);
+
+      var photoLocation =
+      {
+        lat: parseFloat(
+          this.yelpListResults[currentResult].coordinates.latitude , 10),
+        lng: parseFloat(
+          this.yelpListResults[currentResult].coordinates.longitude , 10)
+      }
+      appMap.renderMarker(photoLocation);
+
+
+
+
+
+
+
       currentResult++;
+
     }
+  }
+  setPosition(position) {
+    this.latitude = position.clickLat;
+    this.longitude = position.clickLon;
   }
 }
