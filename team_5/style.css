@@ -2,7 +2,6 @@
 body{
   position: fixed;
 }
-
 .nav-tabs,
 .tabTitle{
   background-color: #ddb330;
@@ -85,7 +84,18 @@ body{
   height: 50vh;
   max-width: 100%;
 }
-
+.instructionDisplay{
+  display: inline-block;
+  background-color: #9a261c;
+  height: 50vh;
+  width: 18vw;
+  vertical-align: top;
+  font-family: 'Bangers', cursive;
+  font-size: 20px;
+  color: rgb(219, 204, 204);
+  text-align: left;
+  overflow-y: none;
+}
 .flickrInput{
   height: 95%;
   display: inline-block;
@@ -110,31 +120,6 @@ body{
 .weatherContainer .weatherTemp{
   font-weight: bolder;
 }
-
-.instructionDisplay{
-  display: inline-block;
-  background-color: #9a261c;
-  height: 50vh;
-  width: 18vw;
-  vertical-align: top;
-  font-family: 'Bangers', cursive;
-  font-size: 25px;
-    color: rgb(219, 204, 204);
-  text-align: center;
-  overflow-y: none;
-}
-/* .instructionDisplay{
-  height: 95%;
-  display: inline-block;
-  background-color: #9a261c;
-  height: 50vh;
-  width: 18vw;
-  vertical-align: top;
-  font-family: 'Bangers', cursive;
-  font-size: 20px;
-  text-align: left;
-  overflow-y: none;
-} */
 .flickrOutput{
   background-color: #9a261c;
   height: 100%;
@@ -148,15 +133,10 @@ body{
   border-radius: 7px;
 }
 .flickrApiContainer{
-
   height: 73.9vh;
-
-  /* height: 70vh; */
-
 }
 .flickrOutput img {
   max-width: 220px;
-
 }
 .yelpOutput{
   background-color: #9a261c;
@@ -181,10 +161,8 @@ body{
 }
 .weatherTemp,
 .weatherDescription {
-
 display: inline-block;
 font-family: 'Rajdhani', sans-serif;
-
 }
 .yelpResultContainer{
   right: 0;

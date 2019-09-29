@@ -37,17 +37,8 @@ function initializeApp(){
 
   var nasa = new Nasa();
   var asteroids = nasa.getAsteroids();
-  // appMapp.addClickCallback( asteroids.handleImpact );
-  // var mapCircle = new google.maps.Circle({
-  //   center: "latitude/longitude",
-  //   radius: "blast radius",
-  //   strokeColor: "#0000FF",
-  //   strokeOpacity: 0.8,
-  //   strokeWeight: 2,
-  //   fillColor: "#0000FF",
-  //   fillOpacity: 0.4
-  // });
-  // $(".asteroidButton").on("click", mapCircle);
+  var impactRadii = nasa.addClickHandler(".asteroidContainer");
+  appMap.addClickCallback(nasa.setPosition);
 
   // var yelpApi = new Yelp();
   // var yelpDataAccess = yelpApi.getYelpData();

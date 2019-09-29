@@ -17,11 +17,11 @@ class DisplayWeather{
         $('.weatherDescription').text(weatherDescription);
         var location = data.name;
         $('.location').text(location);
-        var windSpeed = data.wind.speed;
-        $('.windSpeed').text("Wind Speed : " + windSpeed.toFixed(0) + " mph");
-        var windDirection = data.wind.deg;
-        $('.windDirection').text("Wind Direction : "
-          + windDirection.toFixed(0) + " degrees");
+        // var windSpeed = data.wind.speed;
+        // $('.windSpeed').text("Wind Speed : " + windSpeed.toFixed(0) + " mph");
+        // var windDirection = data.wind.deg;
+        // $('.windDirection').text("Wind Direction : "
+        //   + windDirection.toFixed(0) + " degrees");
     }.bind(this));
   }
 
