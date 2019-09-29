@@ -1,0 +1,204 @@
+
+body{
+  position: fixed;
+}
+.nav-tabs,
+.tabTitle{
+  background-color: #ddb330;
+  color: #9a261c;
+}
+.nav-tabs{
+  border-radius: 7px;
+}
+.mapContainer{
+  height: 95vh;
+   width: 55vw;
+  display: inline-block;
+  margin-right: 25px;
+  margin-left:25px;
+  margin-top: 25px;
+  border-radius: 7px;
+  background-color: #ddb330;
+}
+.googleMap {
+  height: 80%;
+  width: 90%;
+  top: 5%;
+  left: 5%;
+}
+#menuContainer{
+  margin-top: 25px;
+  display: inline-block;
+  width: 38vw;
+  vertical-align: top;
+  overflow-y: auto;
+}
+.superheroBox{
+  height: 100%;
+  max-width: 250px;
+  display: inline-block;
+  vertical-align: top;
+}
+.asteroidBox{
+  height: 70vh;
+  display: inline-block;
+  vertical-align: top;
+  background-color:  #9a261c;
+  width: 100%;
+  color:white;
+  border-radius: 7px;
+}
+.superheroContainer{
+  font-family: 'Bangers', cursive;
+  vertical-align: top;
+  display: inline-block;
+}
+.asteroidTitle{
+  font-family: 'Bangers', cursive;
+  font-size: 2em;
+  color: rgb(219, 204, 204);
+  text-align: center;
+  font-family: 'Rajdhani', sans-serif;
+}
+.asteroidContainer{
+  border-radius: 7px;
+  width: 90%;
+  margin-top: 12px;
+  margin-left: 9px;
+  color: rgb(219, 204, 204);
+  border: 1px solid white;
+  font-size: 1.5em;
+  font-family: 'Bangers', cursive;
+  font-size: 15px;
+  text-align: left;
+  overflow-y: none;
+}
+.countDiv, .nameDiv, .diameterDiv, .baseDiv, .affiliationDiv{
+  margin: 10px;
+}
+.nameList, .diameterList{
+  font-size: 15px;
+}
+.superheroContainer img{
+  height: 50vh;
+  max-width: 100%;
+}
+.instructionDisplay{
+  display: inline-block;
+  background-color: #9a261c;
+  height: 50vh;
+  width: 18vw;
+  vertical-align: top;
+  font-family: 'Bangers', cursive;
+  font-size: 20px;
+  color: rgb(219, 204, 204);
+  text-align: left;
+  overflow-y: none;
+}
+.flickrInput{
+  height: 95%;
+  display: inline-block;
+  width: 24vw;
+}
+.yelpBox{
+  height: 95%;
+  width: 24vw;
+  display: inline-block;
+}
+#flickr{
+  width: 100%;
+}
+.weatherDisplay{
+  width: 18vw;
+  top: 3.5vw;
+  background-color: white;
+  position: relative;
+  margin-left: 5%;
+  border-radius: 7px;
+}
+.weatherContainer .weatherTemp{
+  font-weight: bolder;
+}
+.flickrOutput{
+  background-color: #9a261c;
+  height: 100%;
+  width: 36vw;
+  margin-top: 25px;
+  margin-left: 25px;
+  height: 95%;
+  display: inline-block;
+  padding-left: 2vw;
+  overflow-y: auto;
+  border-radius: 7px;
+}
+.flickrApiContainer{
+  height: 73.9vh;
+}
+.flickrOutput img {
+  max-width: 220px;
+}
+.yelpOutput{
+  background-color: #9a261c;
+  width: 26vw;
+  margin-left: 25px;
+  margin-top: 25px;
+  height: 75vh;
+  padding-left: 1vw;
+  position: fixed;
+  overflow-y: auto;
+  border-radius: 7px;
+}
+.weatherIcon{
+  height: 1%;
+  position: relative;
+}
+.location{
+  position: relative;
+  left: 3.5vw;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: bolder;
+}
+.weatherTemp,
+.weatherDescription {
+display: inline-block;
+font-family: 'Rajdhani', sans-serif;
+}
+.yelpResultContainer{
+  right: 0;
+  height: 10vmin;
+  width: 48vmin;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.yelpName{
+  font-size: 2vmin;
+  padding-top: 5px;
+  text-decoration: none;
+  color: black;
+}
+.yelpAddress{
+  font-size: 1.3vmin;
+  color:white;
+}
+.yelpRatingReviewPrice{
+  font-size: 1.5vmin;
+   color:white;
+}
+.yelpName,
+.yelpAddress,
+.yelpRatingReviewPrice,
+.yelpCategory {
+  color: white;
+  font-family: 'Rajdhani', sans-serif;
+}
+.yelpCategory{
+  font-size: 1.75vmin;
+  text-transform: uppercase;
+}
+.yelpPhoto{
+  height: 10vmin;
+  width: 10vmin;
+  display: flex;
+  float: left;
+  padding-right: 3.5%;
+}

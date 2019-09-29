@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hackathon 2</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Bangers|Rajdhani&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_hLk7PSfWGdfOf0OCRgVdtx7zr-xzZQw"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="js/flickr.js"></script>
+  <script src="js/display_wx.js"></script>
+  <script src="js/nasa.js"></script>
+  <script src="js/superhero.js"></script>
+  <script src="js/yelp.js"></script>
+  <script src="js/display_map.js"></script>
+  <script src="js/main.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_hLk7PSfWGdfOf0OCRgVdtx7zr-xzZQw&callback=initMap" async defer></script> -->
+</head>
+
+<body>
+  <audio id="impact">
+    <source src="audio/falling_rock.wav" type="audio/mpeg">
+  </audio>
+
+    <div class="mapContainer">
+      <div class="googleMap" id="map"></div>
+      <div class="weatherDisplay">
+        <div class="weatherContainer">
+          <img class="weatherIcon" src="http://openweathermap.org/img/w/50d.png" alt="">
+          <div class="weatherTemp">-20F</div>
+          <div class="weatherDescription">Clear</div>
+          <div class="location">Area 51</div>
+        </div>
+      </div>
+    </div>
+ <div id="menuContainer">
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#home" class="tabTitle">Superhero</a></li>
+      <li><a data-toggle="tab" href="#menu1" class="tabTitle">Photos</a></li>
+      <li><a data-toggle="tab" href="#menu2" class="tabTitle">Places</a></li>
+      <li><a data-toggle="tab" href="#menu3" class="tabTitle">Asteroids</a></li>
+    </ul>
+    <div class="tab-content">
+      <div id="home" class="tab-pane fade in active">
+        <div class="superheroBox">
+          <div class="superheroContainer"></div>
+        </div>
+        <div class="instructionDisplay"></div>
+
+      </div>
+      <div id="menu1" class="tab-pane fade">
+        <h3>Flickr - Explore awesome pictures in any location!</h3>
+        <div class="flickrInput">
+          <input type="text" id="photoFilter">
+          <button id="submitPhotoFilter">Submit</button>
+        </div>
+        <div class="flickrOutput">
+          <div id="flickrApiContainer" class=flickrApiContainer>
+            <div style="clear:both;"></div>
+            <div id="flickr"></div>
+          </div>
+        </div>
+      </div>
+      <div id="menu2" class="tab-pane fade">
+        <h3>Yelp - Discover a delicious new place to eat!</h3>
+        <div class="yelpBox">
+          <input class="yelpInput">
+          <button id="yelpButton">Submit</button>
+        </div>
+        <div class="yelpOutput">
+          <div class="yelpContainer"></div>
+        </div>
+      </div>
+      <div id="menu3" class="tab-pane fade">
+        <h3>JPL - Click an asteroid to see its impact damage!</h3>
+        <div class="asteroidBox">
+          <div class="asteroidTitle">The Number of Asteroids Near Earth Yesterday:</div>
+          <div class="asteroidContainer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
