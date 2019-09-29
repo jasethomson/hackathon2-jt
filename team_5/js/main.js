@@ -22,10 +22,15 @@ function initializeApp(){
 
   flickrPhotoSearch.addClickHandlers('#photoFilter','#submitPhotoFilter');
 
+  var yelpApi = new Yelp();
+  // var yelpDataAccess = yelpApi.getYelpData();
+
+
   appMap.addClickCallback(flickrPhotoSearch.setPosition);
   appMap.addClickCallback(displayWeather.setPosition);
   appMap.addClickCallback(displayWeather.renderWeatherInfo);
-
+  appMap.addClickCallback(yelpApi.setPosition);
+  var yelpDataAccess = yelpApi.getYelpData();
   var hero = new Superhero();
   var superheroes = hero.getSuperheroes();
   // appMap.addClickCallback( superheroes.updateSuperhero );
@@ -35,8 +40,8 @@ function initializeApp(){
   var impactRadii = nasa.addClickHandler(".asteroidContainer");
   appMap.addClickCallback(nasa.setPosition);
 
-  var yelpApi = new Yelp();
-  var yelpDataAccess = yelpApi.getYelpData();
+  // var yelpApi = new Yelp();
+  // var yelpDataAccess = yelpApi.getYelpData();
   // appMap.addClickCallback( yelpApi.getRestaurantsForLocation );
 
 }

@@ -56,7 +56,8 @@ body{
 .asteroidTitle{
   font-family: 'Bangers', cursive;
   font-size: 2em;
-  color: rgb(219, 204, 204);
+  /* color: rgb(219, 204, 204); */
+  color: white;
   text-align: center;
   font-family: 'Rajdhani', sans-serif;
 }
@@ -65,8 +66,8 @@ body{
   width: 90%;
   margin-top: 12px;
   margin-left: 9px;
-  color: rgb(219, 204, 204);
   border: 1px solid white;
+  color: rgb(219, 204, 204);
   font-size: 1.5em;
   font-family: 'Bangers', cursive;
   font-size: 15px;
